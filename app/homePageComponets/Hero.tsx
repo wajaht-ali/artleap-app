@@ -7,11 +7,11 @@ export const Hero = () => {
     <div>
       {/* bg gradients */}
       <Gradients />
-
       {/* Prompt Bar */}
-      <div className='w-full flex justify-center'>
-        <PromptBar/>
-      </div>
+     <div className="w-full flex justify-center px-4 sm:px-6 mt-6 ">
+  <PromptBar />
+</div>
+
     </div>
   )
 }
