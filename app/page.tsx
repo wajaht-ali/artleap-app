@@ -1,6 +1,6 @@
-import CommunityCreations from "./homePageComponets/CommunityCreations";
-import FeatureCards from "./homePageComponets/FeatureCards";
-import { Hero } from "./homePageComponets/Hero";
+import CommunityCreations from "./homePage/CommunityCreations";
+import FeatureCards from "./homePage/FeatureCards";
+import { Hero } from "./homePage/Hero";
 
 
 export default function Home() {
