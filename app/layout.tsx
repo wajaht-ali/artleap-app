@@ -1,7 +1,7 @@
-
-import { Navbar } from "./Common/Navbar";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
+import { Metadata } from "next";
+import ClientLayoutWrapper from "./ClientLayoutWrapper";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,19 +9,28 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export const metadata = {
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+export const metadata: Metadata = {
   title: "Artleap AI | Transform your photos with AI",
   description: "Transform your photos with the power of AI using Artleap.",
+  icons: {
+    icon: "/assets/images/artleap-svg-logo.svg",
+  },
 };
 
-export default function RootLayout({ children }: {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="relative">
-        <Navbar/>
-        {children}
+    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+      <body className="relative min-h-screen bg-black text-white">
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
   );

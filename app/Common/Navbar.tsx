@@ -1,8 +1,10 @@
 // Navbar.tsx
 "use client"
+import Link from "next/link";
 import React from "react";
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
+
     return (
         <nav className="w-full relative z-20 px-6 sm:px-10 md:px-14 py-4 md:py-6 bg-transparent">
             <div className="flex items-center justify-between w-full">
@@ -21,9 +23,11 @@ export const Navbar = () => {
 
                 {/* Right: Buttons */}
                 <div className="flex items-center gap-4 sm:gap-5 md:gap-6">
-                    <button className="w-[120px] h-[40px] sm:w-[160px] sm:h-[48px] md:w-[195px] md:h-[55px] border border-[#E0E0E0] rounded-[8px] md:rounded-[10px] text-black bg-white text-sm sm:text-base md:text-lg font-medium hover:bg-gray-100 transition">
-                        Log in
-                    </button>
+                    <Link href="/auth/signup">
+                        <button type="button" className="w-[120px] h-[40px] sm:w-[160px] sm:h-[48px] md:w-[195px] md:h-[55px] border border-[#E0E0E0] rounded-[8px] md:rounded-[10px] text-black bg-white text-sm sm:text-base md:text-lg font-medium hover:bg-gray-100 hover:cursor-pointer transition">
+                            Login
+                        </button>
+                    </Link>
                     <span className="text-white font-medium text-sm sm:text-base md:text-[18px]">
                         Go Premium
                     </span>
