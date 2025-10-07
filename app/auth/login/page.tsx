@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 import AuthPageDesign from '@/app/Common/AuthPageDesign';
 import Link from 'next/link';
 
-const Signup = () => {
+const Login: React.FC = () => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
 
     return (
@@ -16,7 +16,7 @@ const Signup = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center w-full md:w-1/2 h-screen px-6 py-12 bg-white text-gray-900">
-                <h1 className="text-3xl font-semibold mb-8">Create Account</h1>
+                <h1 className="text-3xl font-semibold mb-8">Login Here</h1>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mb-6">
                     <button
@@ -24,13 +24,13 @@ const Signup = () => {
                         className="flex items-center justify-center gap-2 border border-[#EEEEEE] hover:cursor-pointer hover:bg-[#e3e3e3] rounded-full py-3 px-4 w-full focus-within:bg-[#FAFAFA] transition"
                     >
                         <FcGoogle className="text-xl" />
-                        <span className="text-sm font-medium">Sign up with Google</span>
+                        <span className="text-sm font-medium">Log In with Google</span>
                     </button>
                     <button
                         type="button"
                         className="flex items-center justify-center gap-2 border border-[#EEEEEE] hover:cursor-pointer hover:bg-[#e3e3e3] rounded-full py-3 px-4 w-full focus-within:bg-[#FAFAFA] transition">
                         <FaGithub className="text-lg" />
-                        <span className="text-sm font-medium">Sign up with Github</span>
+                        <span className="text-sm font-medium">Log In with Github</span>
                     </button>
                 </div>
 
@@ -41,14 +41,6 @@ const Signup = () => {
                 </div>
 
                 <form className="flex flex-col w-full max-w-md space-y-5">
-                    <div className="flex flex-col">
-                        <label className="text-sm mb-1 font-medium">Username</label>
-                        <input
-                            type="text"
-                            placeholder="johndadev"
-                            className="border-b border-gray-300 focus:border-blue-500 outline-none py-2 text-sm transition"
-                        />
-                    </div>
 
                     <div className="flex flex-col">
                         <label className="text-sm mb-1 font-medium">Email</label>
@@ -79,28 +71,22 @@ const Signup = () => {
                         <label className="flex items-center space-x-2 text-sm text-gray-700 select-none hover:cursor-pointer">
                             <input type="checkbox" className="accent-blue-600 w-4 h-4" />
                             <span>
-                                I accept the{" "}
-                                <a
-                                    href="#"
-                                    className="text-blue-600 hover:underline"
-                                >
-                                    Terms & Conditions
-                                </a>
+                                Remember me
                             </span>
                         </label>
                         <button
                             type="submit"
                             className="bg-[#7B76F1] text-white font-medium py-2 px-4 rounded-full hover:opacity-90 text-[13px] hover:cursor-pointer"
                         >
-                            SIGN UP
+                            LOG IN
                         </button>
                     </div>
                 </form>
 
                 <p className="text-sm text-gray-600 mt-8">
-                    Own an Account?{" "}
-                    <Link href="/auth/login" className="uppercase text-blue-600 font-semibold hover:underline">
-                        Log in
+                    No Account Yet?{" "}
+                    <Link href="/auth/signup" className="uppercase text-blue-600 font-semibold hover:underline">
+                        Sign Up
                     </Link>
                 </p>
             </div>
@@ -108,4 +94,4 @@ const Signup = () => {
     );
 };
 
-export default Signup;
+export default Login;

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Artleap AI | Transform your photos with AI",
   description: "Transform your photos with the power of AI using Artleap.",
   icons: {
-    icon: "/assets/images/artleap-svg-logo.svg",
+    icon: "/assets/icons/artleap-svg-logo.svg",
   },
 };
 
