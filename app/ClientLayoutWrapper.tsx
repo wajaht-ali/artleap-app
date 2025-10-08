@@ -9,7 +9,7 @@ export default function ClientLayoutWrapper({
     children: React.ReactNode;
 }) {
     const pathname = usePathname();
-    const hideNavFooterRoutes = ["/auth/login", "/auth/signup"];
+    const hideNavFooterRoutes = ["/auth/login", "/auth/signup", "/auth/forgot-password"];
     const shouldHideNavFooter = hideNavFooterRoutes.includes(pathname);
 
     return (

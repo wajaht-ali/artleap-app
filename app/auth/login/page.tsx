@@ -68,12 +68,7 @@ const Login: React.FC = () => {
                     </div>
 
                     <div className='flex flex-row items-center justify-between'>
-                        <label className="flex items-center space-x-2 text-sm text-gray-700 select-none hover:cursor-pointer">
-                            <input type="checkbox" className="accent-blue-600 w-4 h-4" />
-                            <span>
-                                Remember me
-                            </span>
-                        </label>
+                        <Link href={"/auth/forgot-password"} className="text-sm text-[#7B76F1] font-semibold hover:underline">Forgot Password?</Link>
                         <button
                             type="submit"
                             className="bg-[#7B76F1] text-white font-medium py-2 px-4 rounded-full hover:opacity-90 text-[13px] hover:cursor-pointer"
