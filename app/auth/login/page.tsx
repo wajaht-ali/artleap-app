@@ -8,7 +8,6 @@ import Link from 'next/link';
 
 const Login: React.FC = () => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
-
     return (
         <div className="min-h-screen flex items-center justify-center w-full">
             <div className='hidden md:flex w-1/2 items-center justify-center h-screen relative overflow-hidden'>
