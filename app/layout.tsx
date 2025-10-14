@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Poppins, Inter } from "next/font/google";
 import { Metadata } from "next";
+import { Providers } from "./providers";
 import ClientLayoutWrapper from "./ClientLayoutWrapper";
 
 const poppins = Poppins({
@@ -30,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <body className="relative min-h-screen bg-black text-white">
-        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+        <Providers>
+          <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+        </Providers>
       </body>
     </html>
   );

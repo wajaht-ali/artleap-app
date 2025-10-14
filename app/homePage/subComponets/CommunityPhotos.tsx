@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import call_method from "@/app/utilis/axiosInstance";
-import { endPoints } from "@/app/utilis/apis";
+import call_method from "@/utilis/axiosInstance";
+import { endPoints } from "@/utilis/apis";
 
 interface ImageItem {
   _id: string;
@@ -19,7 +19,7 @@ const CommunityGrid: React.FC = () => {
       try {
         const res = await call_method<{ images: ImageItem[] }>({
           method: "GET",
-          url: endPoints.allImages, 
+          url: endPoints.allImages,
         });
 
         setImages(res.data.images.slice(20, 52));
